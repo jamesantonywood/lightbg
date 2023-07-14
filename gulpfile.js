@@ -32,13 +32,13 @@ gulp.task('data', () => {
 
 gulp.task('js', () => {
     return gulp.src('src/js/*.js')
-        .pipe(webpack({
-            mode: 'production',
-            devtool: 'source-map',
-            output: {
-                filename: 'app.js',
-            }
-        }))
+        // .pipe(webpack({
+        //     mode: 'development',
+        //     devtool: 'source-map',
+        //     output: {
+        //         filename: 'app.js',
+        //     }
+        // }))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
